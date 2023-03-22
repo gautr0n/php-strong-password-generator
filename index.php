@@ -17,7 +17,7 @@
         $lenght = $_GET['lenght'] ?? 8;
         $password =  get_rand_alphanumeric_maiusc_symbol($lenght);
     ?>
-    <div>ila tua password è: <?php echo $password?></div>
+    <div>La tua password è: <?php echo $password?></div>
 </form>
 </body>
 </html>

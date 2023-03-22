@@ -1,6 +1,8 @@
 <?php
     function assign_rand_value($num) {
-        switch($num) {
+        $alfabeto= 'abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!£$%&*#@§';
+        return $alfabeto[$num - 1];
+/*         switch($num) {
             case "1"  : $rand_value = "a"; break;
             case "2"  : $rand_value = "b"; break;
             case "3"  : $rand_value = "c"; break;
@@ -73,14 +75,13 @@
             case "70" : $rand_value = "@"; break;
             case "71" : $rand_value = "§"; break;
         }
-        return $rand_value;
+        return $rand_value; */
     }
 
     function get_rand_alphanumeric_maiusc_symbol($length) {
         if ($length>0) {
             $rand_id="";
             for ($i=1; $i<=$length; $i++) {
-                mt_srand((double)microtime() * 1000000);
                 $num = mt_rand(1,71);
                 $rand_id .= assign_rand_value($num);
             }
@@ -92,7 +93,6 @@
         if ($length>0) {
             $rand_id="";
             for ($i=1; $i<=$length; $i++) {
-                mt_srand((double)microtime() * 1000000);
                 $num = mt_rand(1,62);
                 $rand_id .= assign_rand_value($num);
             }
@@ -104,7 +104,6 @@
         if ($length>0) {
             $rand_id="";
             for($i=1; $i<=$length; $i++) {
-                mt_srand((double)microtime() * 1000000);
                 $num = mt_rand(27,36);
                 $rand_id .= assign_rand_value($num);
             }
@@ -116,7 +115,6 @@
         if ($length>0) {
             $rand_id="";
             for($i=1; $i<=$length; $i++) {
-                mt_srand((double)microtime() * 1000000);
                 $num = mt_rand(37,62);
                 $rand_id .= assign_rand_value($num);
             }
@@ -128,7 +126,6 @@
         if ($length>0) {
             $rand_id="";
             for($i=1; $i<=$length; $i++) {
-                mt_srand((double)microtime() * 1000000);
                 $num = mt_rand(63,71);
                 $rand_id .= assign_rand_value($num);
             }
@@ -140,7 +137,6 @@
         if ($length>0) {
             $rand_id="";
             for($i=1; $i<=$length; $i++) {
-                mt_srand((double)microtime() * 1000000);
                 $num = mt_rand(1,26);
                 $rand_id .= assign_rand_value($num);
             }
